@@ -1,0 +1,10 @@
+<main aria-role="main">
+    <header class="homepage-header">
+    <h1>{{.Title}}</h1>
+    </header>
+    <div class="homepage-content">
+        {{.Params.randomvar}} <!-- can set any var you want: see randomvar in api.md -->
+        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        {{.Content}}
+    </div>
+</main>

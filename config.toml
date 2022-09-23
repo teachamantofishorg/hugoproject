@@ -1,0 +1,28 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'My New Hugo Site'
+theme = "hugo-theme-learn" 
+sectionPagesMenu = "main"
+pluralizelisttitles = "false"
+
+
+
+[params]
+  # Change default color scheme with a variant one. Can be "red", "blue", "green".
+  themeVariant = "mine"
+  custom_css = ["css/custom.css"]
+  custom_js = ["js/test.js"]
+
+[outputs]
+home = [ "HTML"]
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^python$', '^rst2html.py$']
+    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
+  [security.funcs]
+    getenv = ['^HUGO_']
+  [security.http]
+    methods = ['(?i)GET|POST']
+    urls = ['.*']

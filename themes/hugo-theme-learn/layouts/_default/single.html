@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+
+<div class="flex-container">
+	<div class="flex-items">
+        {{ .Content }}
+    </div>
+
+	<div class="flex-items">
+        3rd column lklkjlknnn
+	</div>
+ </div>
+
+
+
+<p>logo in footer to show this is here</p>
+
+<footer class="footline">
+	{{with .Params.LastModifierDisplayName}}
+	    <i class='fas fa-user'></i> <a href="mailto:{{ $.Params.LastModifierEmail }}">{{ . }}</a> {{with $.Date}} <i class='fas fa-calendar'></i> {{ .Format "02/01/2006" }}{{end}}
+	    </div>
+	{{end}}
+</footer>
+
+{{ partial "footer.html" . }}
