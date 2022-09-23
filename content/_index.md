@@ -68,8 +68,6 @@ note the "<>" do xxxxx and "%" do xxxxxxx
 - add the back to top button
 -code syntax highlighting, line numbering: https://gohugo.io/content-management/syntax-highlighting/
 
-slkjasdskj
-alkjldksjlfkdjl
 
 .. include:: /path/codesample.txt "id=codesample"
 

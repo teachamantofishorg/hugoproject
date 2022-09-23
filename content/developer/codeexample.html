@@ -1,10 +1,10 @@
-#include "SnippetRunner.h"
- #include "SnippetRunnerUtils.h"
+#include "codeexample.h"
+ #include "codeexampleUtils.h"
 
- void SimpleSnip()
+ void Simple()
  {
-     Console::displayString("This is a simple snippet.");
-     Console::displayString("Simple snippet executed");
+     Console::displayString("This is a simple example.");
+     Console::displayString("Simple Examplepet executed");
  }
 
- SNIPRUN_REGISTER(SimpleSnip, "Simple Framework", "SimpleSnip creates a framework for a snippet.")
+ CONSTANT (SimpleExample, "Simple Framework", "SimpleExample creates a framework.")
