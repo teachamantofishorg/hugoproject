@@ -31,6 +31,26 @@ $(document).ready(function() {
       }
     }
   );
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) {
+      $('.fixedbar, .wy-nav-side').addClass('scroll');
+      $('.wy-top-menu-wrapper').fadeOut();
+    } else {
+      $('.fixedbar, .wy-nav-side').removeClass('scroll');
+      $('.wy-top-menu-wrapper').fadeIn();
+    }
+  });
+  $(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+      $('#scroll').fadeIn();
+    } else {
+      $('#scroll').fadeOut();
+    }
+  });
+  $('#scroll').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
 });
 </script>
 

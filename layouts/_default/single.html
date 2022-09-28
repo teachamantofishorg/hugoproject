@@ -6,13 +6,18 @@
     </div>
 
 	<div id="code-column" class="flex-items" style="display:none;">
-        {{ partial "code.html" .}}
+		<!-- https://mertbakir.gitlab.io/hugo/pass-arguments-in-partials-hugo/ -->
+        {{ partial "rightcolumn.html" .}}
 	</div>
+ </div>
+
+ <div class="wy-nav-content">
+	<a href="#" id="scroll"><span></span></a>
  </div>
 
 
 
-<p>Footer string</p>
+<p>I'm a footer string</p>
 
 <footer class="footline">
 	{{with .Params.LastModifierDisplayName}}
