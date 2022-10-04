@@ -19,7 +19,7 @@ home = [ "HTML"]
 [security]
   enableInlineShortcodes = false
   [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^python$', '^rst2html.py$']
+    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^python$', '^rst2html.py$', '^rst2html']
     osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
   [security.funcs]
     getenv = ['^HUGO_']

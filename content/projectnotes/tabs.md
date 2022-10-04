@@ -14,6 +14,7 @@ draft: false
 
 
 ## Tabs
+{{< codeforrightcolumn right >}}
 
 {{< tabs >}}
 {{% tab name="python" %}}
@@ -32,6 +33,7 @@ draft: false
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
 
 more tabs
 
@@ -52,3 +54,5 @@ more tabs
 ```
 {{% /tab %}}
 {{< /tabs >}}
+
+{{< /codeforrightcolumn >}}

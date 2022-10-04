@@ -27,7 +27,9 @@ $(document).ready(function() {
         column.style.display = 'none';
       }
       else {
+        var column_content = document.getElementById('right-column-content')
         column.style.display = 'block';
+        column.innerHTML = column_content.innerHTML
       }
     }
   );

@@ -14,8 +14,29 @@ This include file example, works, but it should appear in a third column if it i
 
 This adds the "right" class to the code sample: 
 
+
 {{< codeforrightcolumn right >}}
-{{< include "/../../resources/codesamples/onemore.txt" >}}
+
+{{< tabs >}}
+{{% tab name="python" %}}
+```python
+{{% include "/../../resources/codesamples/codesample.html"   %}}
+```
+{{% /tab %}}
+{{% tab name="javascript" %}}
+```javascript
+{{% include "/../../resources/codesamples/code.html"   %}}
+```
+{{% /tab %}}
+{{% tab name="java" %}}
+```java
+{{% include "/../../resources/codesamples/codesample.txt"   %}}
+```
+{{% /tab %}}
+{{< /tabs >}}
+
+
+
 {{< /codeforrightcolumn >}}
 
 
