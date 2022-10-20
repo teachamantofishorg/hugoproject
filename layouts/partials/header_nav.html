@@ -1,8 +1,32 @@
 <div class="fixedbar">  
     <div class="wy-menu-items">
-      <a href="https://www.google.com" class="topbarlink">one</a>
-      <a href="https://www.google.com" class="topbarlink">two</a>
-      <a href="https://www.google.com" class="topbarlink">three</a>  
+       {{ $currentPage := . }}
+      <ul class="nav">
+      {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+              <li class="{{ if $currentPage.HasMenuCurrent "main" . }}active{{ end }}">
+                  <a href="#">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+              <ul class="sub-menu">
+                  {{ range .Children }}
+                      <li class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}">
+                          <a href="{{ .URL }}">{{ .Name }}</a>
+                      </li>
+                  {{ end }}
+              </ul>
+          {{ else }}
+              <li>
+                  <a href="{{ .URL }}">
+                      {{ .Pre }}
+                      <span>{{ .Name }}</span>
+                  </a>
+              </li>
+          {{ end }}
+      {{ end }}
+            </ul>
 
       <a {{ if (eq .File.LogicalName "_index.md") }}style="pointer-events:none; color: #dddddd;"{{ end }} id="column-toggler" href="#" class="page-nav-buttons topbarlink"><i class="fa fa-eye" aria-hidden="true"></i></a>
       {{ $currentNode := . }}

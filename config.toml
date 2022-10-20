@@ -1,28 +1,50 @@
-baseURL = 'http://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
-theme = "hugo-theme-learn" 
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "My New Hugo Site"
+theme = "hugo-theme-learn"
 sectionPagesMenu = "main"
 pluralizelisttitles = "false"
 
-
-
 [params]
-  # Change default color scheme with a variant one. Can be "red", "blue", "green".
-  themeVariant = "mine"
-  custom_css = ["css/custom.css"]
-  custom_js = ["js/test.js"]
+themeVariant = "mine"
+custom_css = [ "css/custom.css",]
+custom_js = [ "js/test.js",]
 
 [outputs]
-home = [ "HTML"]
+home = [ "HTML",]
 
 [security]
-  enableInlineShortcodes = false
-  [security.exec]
-    allow = ['^dart-sass-embedded$', '^go$', '^npx$', '^postcss$', '^python$', '^rst2html.py$', '^rst2html']
-    osEnv = ['(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$']
-  [security.funcs]
-    getenv = ['^HUGO_']
-  [security.http]
-    methods = ['(?i)GET|POST']
-    urls = ['.*']
+enableInlineShortcodes = false
+
+[menu]
+[[menu.main]]
+identifier = "home"
+name = "Home"
+pre = "<i class='fa fa-heart'></i>"
+url = "/"
+weight = 1
+
+[[menu.main]]
+identifier = "projectnotes"
+name = "Project Overview"
+pre = "<i class='fa fa-road'></i>"
+url = "/projectnotes/"
+weight = 2
+
+[[menu.main]]
+identifier = "otherfiletypes"
+name = "Other file types"
+pre = "<i class='fa fa-road'></i>"
+url = "/otherfiletypes/"
+weight = 3
+
+[security.exec]
+allow = [ "^dart-sass-embedded$", "^go$", "^npx$", "^postcss$", "^python$", "^rst2html.py$", "^rst2html",]
+osEnv = [ "(?i)^(PATH|PATHEXT|APPDATA|TMP|TEMP|TERM)$",]
+
+[security.funcs]
+getenv = [ "^HUGO_",]
+
+[security.http]
+methods = [ "(?i)GET|POST",]
+urls = [ ".*",]
