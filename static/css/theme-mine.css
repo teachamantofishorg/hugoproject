@@ -280,14 +280,6 @@ td > img {
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Adobe Clean';
-    src: url('..\\fonts\\AdobeClean-Regular.woff2') format('woff2'),
-        url('..\\fonts\\AdobeClean-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
 
 /* Theme Overrides Carry Over CSS */
 /* STARTS HERE !!!!!!!! */

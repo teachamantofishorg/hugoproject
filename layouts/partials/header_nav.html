@@ -28,7 +28,7 @@
       {{ end }}
             </ul>
 
-      <a {{ if (eq .File.LogicalName "_index.md") }}style="pointer-events:none; color: #dddddd;"{{ end }} id="column-toggler" href="#" class="page-nav-buttons topbarlink"><i class="fa fa-eye" aria-hidden="true"></i></a>
+      <a {{ if (eq .File.LogicalName "_index.md") }}style="pointer-events:none; color: #dddddd;"{{ end }} id="column-toggler"  class="page-nav-buttons topbarlink" style="cursor: pointer;"><i class="fa fa-eye" aria-hidden="true"></i></a>
       {{ $currentNode := . }}
 
       {{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}

@@ -3,3 +3,13 @@
     list-style-type: none;
     margin: 0;
 }
+#code-column {
+    position: relative;
+    padding: 2rem;
+    top: 0;
+}
+#code-column-content {
+    position: fixed;
+    height: 100%;
+
+}

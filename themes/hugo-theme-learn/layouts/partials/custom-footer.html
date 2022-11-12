@@ -1,58 +1,66 @@
 <!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript) -->
 <script>
-    //Get the button:
-mybutton = document.getElementById("myBtn");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
+const updateRightColumn = (h) => {
+  let content = $('h2#code' + h[0]).nextAll('div.right-column-content')
+  if (content.length > 0) {
+    let column_content = content[0]
+    var intoHere = document.getElementById('code-column-content');
+    intoHere.innerHTML = column_content.innerHTML
+    return true
+  }
+  else {
+    return false
   }
 }
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+const findTopHeader = (headers) => {
+  let rtn = null
+  Object.entries(headers).forEach((h) => {
+    var rect = h[1].getBoundingClientRect();
+    if (rtn === null && rect.bottom > 0) {
+      rtn = h
+      
+    }
+  })
+  return rtn
 }
-
+const scrollUpdateRightColumn = () => {
+  let new_h = findTopHeader(headers)
+  if (new_h){
+    if (updateRightColumn(new_h)) 
+      currentSelected = new_h
+  } 
+}
 $(document).ready(function() {
+  let headers = document.body.getElementsByTagName('h2')
+  Object.entries(headers).forEach((h) => {
+    h[1].id = 'code' + h[0]
+  })
+  
+  let currentSelected = ['0', headers[0]]
+  let new_h = findTopHeader(headers)
+  if (new_h){
+    if (updateRightColumn(new_h)) 
+      currentSelected = new_h
+  } 
+  
+  $(document).on( 'scroll', function(){
+    let new_h = findTopHeader(headers)
+    if (new_h){
+      if (updateRightColumn(new_h)) 
+        currentSelected = new_h
+    } 
+  });
   $("#column-toggler").click(function() {
-      var column = document.getElementById('code-column');
-      if (column.style.display !== 'none') {
-        column.style.display = 'none';
-      }
-      else {
-        var column_content = document.getElementById('right-column-content')
-        column.style.display = 'block';
-        column.innerHTML = column_content.innerHTML
-      }
-    }
-  );
-  $(window).scroll(function () {
-    if ($(this).scrollTop() >= 50) {
-      $('.fixedbar, .wy-nav-side').addClass('scroll');
-      $('.wy-top-menu-wrapper').fadeOut();
-    } else {
-      $('.fixedbar, .wy-nav-side').removeClass('scroll');
-      $('.wy-top-menu-wrapper').fadeIn();
-    }
+    var column = document.getElementById('code-column');
+  
+    if (column.style.display !== 'none') column.style.display = 'none';
+    else column.style.display = 'block';
+    updateRightColumn(currentSelected)
+
   });
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-      $('#scroll').fadeIn();
-    } else {
-      $('#scroll').fadeOut();
-    }
-  });
-  $('#scroll').click(function () {
-    $("html, body").animate({ scrollTop: 0 }, 600);
-    return false;
-  });
+ 
 });
 </script>
 
