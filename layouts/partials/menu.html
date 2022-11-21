@@ -26,7 +26,30 @@
     
         <div class="highlightable">
         <ul class="topics">
-    
+          <!-- Code below is for menu creation from config.toml file -->
+          <!-- Below goes in config.toml -->
+          {{/*  [menu]
+          [[menu.sites]]
+              identifier = "projectnotes"
+              name = "Project Notes"
+              url = "/projectnotes/"
+              weight = 10
+
+          [[menu.sites]]
+            identifier = "otherfiletypes"
+                name = "Other File Types"
+                url = "/otherfiletypes/"
+                weight = 20  */}}
+
+            <!-- Goes here for menu creation -->
+            {{/*  {{ range .Site.Menus.sites }}
+              <li>
+                <a href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+            {{ end }}  */}}
+      
+        
+            <!-- Dynamically generated links -->
             {{if eq .Site.Params.ordersectionsby "title"}}
               {{range .Site.Home.Sections.ByTitle}}
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
@@ -36,6 +59,17 @@
               {{ template "section-tree-nav" dict "sect" . "currentnode" $currentNode "showvisitedlinks" $showvisitedlinks}}
               {{end}}
             {{end}}
+
+            <!-- Static links, adjust accordingly -->
+            {{ partial "external-links" 
+              (dict 
+                "firstLink" "https://www.google.com/" 
+                "firstTitle" "Google" 
+                "secondLink" "https://example.com" 
+                "secondTitle" "Example" 
+                "thirdLink" "www.test.com" 
+                "thirdTitle" "Test") 
+            }}
         </ul>
     
         {{ $disableShortcutsTitle := .Site.Params.DisableShortcutsTitle}}
@@ -157,9 +191,14 @@
             {{safeHTML .Params.Pre}}{{or .Params.menuTitle .LinkTitle .Title}}{{safeHTML .Params.Post}}
             {{ if $showvisitedlinks}}<i class="fas fa-check read-icon"></i>{{end}}
             </a>
+            {{if eq .File.UniqueID $currentFileUniqueID}}
+              <div class="table-of-contents">
+                {{ .TableOfContents}}
+              </div>
+            {{end}}
+            
         </li>
          {{ end }}
       {{end}}
      {{ end }}
     {{ end }}
-    

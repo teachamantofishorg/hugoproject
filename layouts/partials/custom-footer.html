@@ -1,0 +1,96 @@
+
+<!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript) -->
+<script>
+// Get offset of initial code samples in main column
+let position_array = []
+let column = document.getElementById('code-column');
+let top_header_columns = document.getElementsByClassName('second-column');
+let column_content = document.getElementsByClassName('right-column-content');
+let headers = document.getElementsByTagName('h2');
+let code_samples = column.getElementsByClassName('tab-panel');
+
+$(document).ready(function() {
+  $("#column-toggler").click(function() {
+
+      if (column.style.display !== 'none') {
+        column.innerHTML = '';
+        column.style.display = 'none';
+        
+
+        for (element of top_header_columns) {
+          element.style.display = 'none';
+        }
+
+        for (element of column_content) {
+          element.classList.remove('hide');
+          element.classList.add('show');
+        }
+      }
+      else {
+        for (element of column_content) {
+          column.innerHTML += element.innerHTML;
+          element.classList.remove('show')
+          element.classList.add('hide');
+        }
+
+        for (element of top_header_columns) {
+          element.style.display = 'block';
+        }
+        setTimeout(() => {
+          let index = 0;
+          if (!position_array.length) {
+            for (item of headers) {
+              position_array.push($(item).position().top);
+            }
+          }
+
+          for (element of code_samples) {
+            element.style = 
+              'top: ' 
+              + Math.round(position_array[index]).toString() 
+              + 'px; margin-top: 150px !important; position: absolute;';
+            index++;
+          }
+        }, 75);
+        column.style.display = 'block';
+      } 
+    }
+  );
+
+  $(window).scroll(function () {
+    if ($(this).scrollTop() >= 50) {
+      $('.fixedbar, .wy-nav-side').addClass('scroll');
+      $('.wy-top-menu-wrapper').fadeOut();
+    } else {
+      $('.fixedbar, .wy-nav-side').removeClass('scroll');
+      $('.wy-top-menu-wrapper').fadeIn();
+    }
+
+    if ($(this).scrollTop() > 100) {
+      $('#scroll').fadeIn();
+    } else {
+      $('#scroll').fadeOut();
+    }
+
+    let mybutton = document.getElementById("scroll");
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      mybutton ? mybutton.style.display = "block !important" : '';
+    } else {
+      mybutton ? mybutton.style.display = "none !important" : '';
+    }
+  });
+
+  $('#scroll').click(function () {
+    $("html, body").animate({ scrollTop: 0 }, 600);
+    return false;
+  });
+
+});
+
+
+function getElementTopPosition(element) {
+  console.log($(element).position().top);
+  return Math.round($(element).position().top).toString() + 'px';
+
+}
+</script>
