@@ -1,6 +1,7 @@
 ---
 title: "Code Samples"
 draft: false
+code: true
 ---
 
 Tabs doc: https://learn.netlify.app/en/shortcodes/tabs/

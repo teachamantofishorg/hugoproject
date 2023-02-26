@@ -1,6 +1,7 @@
 ---
 title: "Code Samples"
 draft: false
+code: true
 ---
 
 ### Insert Code Example 2
