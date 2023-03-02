@@ -10,16 +10,20 @@ it might be easier to look through the commit changelog directly, however it inc
 [commit changes](https://github.com/teachamantofishorg/hugoproject/commit/ec750c05b4612ae5776a2ba8dea9f9c448682de1)
 
 in the
-```
-layouts/partials/header.html
-```
+
+```layouts/partials/header.html```
+
 i removed the unnecessary 
 ```<div class="flex-items second column"></div>```
 
 i also made a few changes in the
+
 ```static/css/theme-mine.css```
+
 and
+
 ```themes/hugo-theme-learn/static/css/theme.css```
+
 to improve styling of the page, and remove some stuff that was not necessary.
 
 again look at the commit changes to go see what the exact changes are, there is many small things that i changed so it is harder to go into detail.
@@ -77,6 +81,7 @@ in the frontmatter of any content page that should have the eye.
 you may change the name of the argument to whatever you like. just remember to then change the if statement as well
 
 for example if you want to name it eye_toggler you would do
+
 ```
 {{ if .Params.eye_toggler }}
 ```
@@ -160,7 +165,9 @@ to build the content and create the /public folder
 
 or run
 
-```hugo serve``` to launch a local web server with live reload for testing
+```hugo serve```
+
+to launch a local web server with live reload for testing
 
 
 ## using git in the command line
