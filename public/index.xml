@@ -17,16 +17,6 @@ Tabs python javascript java const animals = [&amp;#39;pigs&amp;#39;, &amp;#39;go
     </item>
     
     <item>
-      <title>Synchronized Code Tabs</title>
-      <link>/3_projectnotes/tabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/tabs/</guid>
-      <description>References https://learn.netlify.app/en/shortcodes/tabs/ Additional features: https://github.com/rvanhorn/hugo-dynamic-tabs All work and no play makes jack a dull boy.
-Tabs python javascript java const animals = [&amp;#39;pigs&amp;#39;, &amp;#39;goats&amp;#39;, &amp;#39;sheep&amp;#39;]; const count = animals.push(&amp;#39;cows&amp;#39;); console.log(count); // expected output: 4 console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;] animals.push(&amp;#39;chickens&amp;#39;, &amp;#39;cats&amp;#39;, &amp;#39;dogs&amp;#39;); console.log(animals); // expected output: Array [&amp;#34;pigs&amp;#34;, &amp;#34;goats&amp;#34;, &amp;#34;sheep&amp;#34;, &amp;#34;cows&amp;#34;, &amp;#34;chickens&amp;#34;, &amp;#34;cats&amp;#34;, &amp;#34;dogs&amp;#34;] var DOCUMENTATION_OPTIONS = { URL_ROOT: document.getElementById(&amp;#34;documentation_options&amp;#34;).getAttribute(&amp;#39;data-url_root&amp;#39;), VERSION: &amp;#39;&amp;#39;, LANGUAGE: &amp;#39;None&amp;#39;, COLLAPSE_INDEX: false, BUILDER: &amp;#39;html&amp;#39;, FILE_SUFFIX: &amp;#39;.</description>
-    </item>
-    
-    <item>
       <title></title>
       <link>/2_projectnotes/toc/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -49,34 +39,12 @@ All work and no play makes jack a dull boy. Bacon ipsum dolor amet filet mignon 
     </item>
     
     <item>
-      <title>Code Samples</title>
-      <link>/3_projectnotes/codesamples/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/codesamples/</guid>
-      <description>Tabs doc: https://learn.netlify.app/en/shortcodes/tabs/
-This include file example, works, but it should appear in a third column if it is visible (after clicking the eye icon).
-BUG: We only have one right column, but here we call it 5 times. So we need to keep adding the tab collections to the one right column somehow.
-All work and no play makes jack a dull boy. Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick.</description>
-    </item>
-    
-    <item>
       <title>HTML File</title>
       <link>/otherfiletypes/html_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/otherfiletypes/html_file/</guid>
       <description>&lt;!doctype html&gt; Our Funky HTML Page Is this working? Content goes here.</description>
-    </item>
-    
-    <item>
-      <title>JSON Documentation</title>
-      <link>/3_projectnotes/json/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/json/</guid>
-      <description>First set Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.
-Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick.</description>
     </item>
     
     <item>
@@ -102,34 +70,12 @@ All work and no play makes jack a dull boy. First set Use inner to place this in
     </item>
     
     <item>
-      <title>Multiple Tabs</title>
-      <link>/3_projectnotes/multipletabs/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/multipletabs/</guid>
-      <description>Insert Code Example 2 Tabs doc: https://learn.netlify.app/en/shortcodes/tabs/
-This include file example, works, but it should appear in a third column if it is visible (after clicking the eye icon).
-BUG: We only have one right column, but here we call it 5 times. So we need to keep adding the tab collections to the one right column somehow.
-All work and no play makes jack a dull boy. First set Use inner to place this in the 3rd column</description>
-    </item>
-    
-    <item>
       <title>Other Links</title>
       <link>/links/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/links/</guid>
       <description>Test</description>
-    </item>
-    
-    <item>
-      <title>Publishing a HUGO project GitHub Pages</title>
-      <link>/3_projectnotes/github-pages/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/github-pages/</guid>
-      <description>Option 1 Generate a static site with hugo --destination docs Deploy and point gh-pages to /docs/. Option 2 pre-req: requires actions support
-To host a page with GitHub pages, the branch name needs to be called projectName.github.io, or organizationName.github.io/projectName note: You&amp;rsquo;ll end up with a .github folder which contains the files needed for github actions. The Hugo Project theme should be installed as a git module Each Hugo project should be contained inside a parent folder named after the project.</description>
     </item>
     
     <item>
@@ -163,35 +109,11 @@ fixed header with onhover</description>
     </item>
     
     <item>
-      <title>TODO and DONE</title>
-      <link>/3_projectnotes/todo/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/todo/</guid>
-      <description>To do: Make top level menu/directory heading &amp;ndash;MAIN-ANCHOR-color: examine java single quote highlighting: try to kill it. Done Add other files types Include files Tabs copy code button Third column: add, show/hide, size Custom fonts fixed header with onhover prev/next buttons narrow search engine 3rd column: Populate with external code samples add tabs Make active category background color something (not white) fix menu border oddities find a home for code samples so dir does not appear in the menu remove space between bullet lists when there&amp;rsquo;s a bullet 2 list embedded (see THIS list).</description>
-    </item>
-    
-    <item>
       <title>Usage Notes</title>
       <link>/2_projectnotes/usage/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/2_projectnotes/usage/</guid>
-      <description>Miscellaneous How or can you add new pages under /content/
-just add dirs and files to add. Requires metadata at the top, including &amp;ldquo;title&amp;rdquo; How to add alternate content types/
-https://gohugo.io/content-management/formats/
-See /otherfiletypes/ in this project
-html rst md How to override the default CSS?
-See /static/css/theme-mine.css.
-add the back to top button - DONE Cale added on 09/26: remove display: block on breadcrumbs top left of page on hover class progress div - In-Progress Shortcodes When bracket (don&amp;rsquo;t process content) and when percent (process further: e.</description>
-    </item>
-    
-    <item>
-      <title>Usage Notes</title>
-      <link>/3_projectnotes/usage/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/3_projectnotes/usage/</guid>
       <description>Miscellaneous How or can you add new pages under /content/
 just add dirs and files to add. Requires metadata at the top, including &amp;ldquo;title&amp;rdquo; How to add alternate content types/
 https://gohugo.io/content-management/formats/
