@@ -47,8 +47,8 @@ $(document).ready(function() {
           for (element of code_samples) {
             element.style = 
               'top: ' 
-              + Math.round(position_array[index]).toString() 
-              + 'px; margin-top: 150px !important;';
+              + Math.round(position_array[index] + 60).toString()
+              + 'px; position: absolute;';
             index++;
           }
         }, 75);
