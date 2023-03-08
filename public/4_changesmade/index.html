@@ -12,22 +12,22 @@
     <title>what Martin did :: My New Hugo Site</title>
 
     
-    <link href="../css/nucleus.css?1678177297" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1678177297" rel="stylesheet">
-    <link href="../css/hybrid.css?1678177297" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1678177297" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1678177297" rel="stylesheet">
-    <link href="../css/auto-complete.css?1678177297" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1678177297" rel="stylesheet">
-    <link href="../css/theme.css?1678177297" rel="stylesheet">
-    <link href="../css/tabs.css?1678177297" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1678177297" rel="stylesheet">
+    <link href="../css/nucleus.css?1678271281" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1678271281" rel="stylesheet">
+    <link href="../css/hybrid.css?1678271281" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1678271281" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1678271281" rel="stylesheet">
+    <link href="../css/auto-complete.css?1678271281" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1678271281" rel="stylesheet">
+    <link href="../css/theme.css?1678271281" rel="stylesheet">
+    <link href="../css/tabs.css?1678271281" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1678271281" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1678177297" rel="stylesheet">
+    <link href="../css/theme-mine.css?1678271281" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1678177297"></script>
+    <script src="../js/jquery-3.3.1.min.js?1678271281"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-search"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1678177297"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1678177297"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1678271281"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1678271281"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1678177297"></script>
+<script type="text/javascript" src="../js/search.js?1678271281"></script>
 
         
       </div>
@@ -744,6 +744,8 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#fixing-the-extra-whitespace-on-the-right">fixing the extra whitespace on the right</a></li>
+    <li><a href="#fix-position-of-the-code">fix position of the code</a></li>
     <li><a href="#css-fix">css fix</a></li>
     <li><a href="#next-code-section-button">next code section button</a></li>
     <li><a href="#eye-toggler">eye toggler</a></li>
@@ -783,7 +785,34 @@
 
 
 
-	<h2 id="css-fix">css fix</h2>
+	<h2 id="fixing-the-extra-whitespace-on-the-right">fixing the extra whitespace on the right</h2>
+<p>in the file <code>themes/hugo-theme-learn/static/css/theme.css</code></p>
+<p>change</p>
+<pre tabindex="0"><code>#body .padding {
+    padding: 3rem 6rem;
+}
+</code></pre><p>to</p>
+<pre tabindex="0"><code>#body .padding {
+    padding-left: 1rem;
+}
+</code></pre><p>using the format padding: x y
+sets the padding-left and pading-right to x
+and the padding-top and padding-bottom to y</p>
+<p>i removed the extra padding to only have the left padding.</p>
+<h2 id="fix-position-of-the-code">fix position of the code</h2>
+<p>in the <code>layouts/partials/custom-footer.html</code>
+we already calculate the y position of each header. however the css was incorrect</p>
+<p>i changed the line</p>
+<pre tabindex="0"><code> + Math.round(position_array[index]).toString() 
+ + &#39;px; margin-top: 150px !important;&#39;;
+</code></pre><p>to</p>
+<pre tabindex="0"><code>  + Math.round(position_array[index] + 60).toString()
+  + &#39;px; position: absolute;&#39;;
+</code></pre><p>the position_array has all the y positions of the array.</p>
+<p>I then add an extra padding of 60px to fit the positioning.</p>
+<p>But most importantly i set the position as absolute. So the css style for &rsquo;top&rsquo; actually works.
+If the position is relative, the css positioning tags like &rsquo;top&rsquo;, &lsquo;bottom&rsquo;, &rsquo;left&rsquo;, &lsquo;right&rsquo; will not work.</p>
+<h2 id="css-fix">css fix</h2>
 <p>for the css fix i removed some code from multiple files</p>
 <p>it might be easier to look through the commit changelog directly, however it includes multiple changes i made:</p>
 <p><a href="https://github.com/teachamantofishorg/hugoproject/commit/ec750c05b4612ae5776a2ba8dea9f9c448682de1">commit changes</a></p>
@@ -1148,19 +1177,19 @@ The if statement checks if the page has the argument code set to true. If it is 
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="../js/clipboard.min.js?1678177297"></script>
-<script src="../js/perfect-scrollbar.min.js?1678177297"></script>
-<script src="../js/perfect-scrollbar.jquery.min.js?1678177297"></script>
-<script src="../js/jquery.sticky.js?1678177297"></script>
-<script src="../js/featherlight.min.js?1678177297"></script>
-<script src="../js/highlight.pack.js?1678177297"></script>
+<script src="../js/clipboard.min.js?1678271281"></script>
+<script src="../js/perfect-scrollbar.min.js?1678271281"></script>
+<script src="../js/perfect-scrollbar.jquery.min.js?1678271281"></script>
+<script src="../js/jquery.sticky.js?1678271281"></script>
+<script src="../js/featherlight.min.js?1678271281"></script>
+<script src="../js/highlight.pack.js?1678271281"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="../js/modernizr.custom-3.6.0.js?1678177297"></script>
-<script src="../js/learn.js?1678177297"></script>
-<script src="../js/hugo-learn.js?1678177297"></script>
+<script src="../js/modernizr.custom-3.6.0.js?1678271281"></script>
+<script src="../js/learn.js?1678271281"></script>
+<script src="../js/hugo-learn.js?1678271281"></script>
 
 
-<script src="../mermaid/mermaid.js?1678177297"></script>
+<script src="../mermaid/mermaid.js?1678271281"></script>
 
 <script>
 mermaid.initialize({ startOnLoad: true });
