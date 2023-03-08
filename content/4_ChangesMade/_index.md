@@ -2,6 +2,59 @@
 title: "what Martin did"
 draft: false
 ---
+
+## fixing the extra whitespace on the right
+
+in the file ```themes/hugo-theme-learn/static/css/theme.css```
+
+change
+
+```
+#body .padding {
+    padding: 3rem 6rem;
+}
+```
+
+to
+
+```
+#body .padding {
+    padding-left: 1rem;
+}
+```
+
+using the format padding: x y
+sets the padding-left and pading-right to x
+and the padding-top and padding-bottom to y
+
+i removed the extra padding to only have the left padding.
+
+## fix position of the code
+
+in the ```layouts/partials/custom-footer.html```
+we already calculate the y position of each header. however the css was incorrect 
+
+i changed the line
+
+```
+ + Math.round(position_array[index]).toString() 
+ + 'px; margin-top: 150px !important;';
+```
+
+to
+```
+  + Math.round(position_array[index] + 60).toString()
+  + 'px; position: absolute;';
+```
+
+the position_array has all the y positions of the array.
+
+I then add an extra padding of 60px to fit the positioning.
+
+But most importantly i set the position as absolute. So the css style for 'top' actually works.
+If the position is relative, the css positioning tags like 'top', 'bottom', 'left', 'right' will not work.
+
+
 ## css fix
 for the css fix i removed some code from multiple files
 
