@@ -14,6 +14,9 @@ the output will be
 
 ```public/anydirectory/images/test_image.png```
 
+
+the syntax ```./``` is always the current directory. since the images are in the same folder as the index folder we use the dot notation to access them
+
 ## fixing the extra whitespace on the right
 
 in the file
