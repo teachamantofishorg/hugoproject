@@ -2,10 +2,23 @@
 title: "what Martin did"
 draft: false
 ---
+## images folder
+
+simply add the images to a dedicated in your content/anydirectory/images
+
+then you can access them directly in your content/anydirectory/index.md file using
+
+```![test image](./images/test_image.png)```
+
+the output will be
+
+```public/anydirectory/images/test_image.png```
 
 ## fixing the extra whitespace on the right
 
-in the file ```themes/hugo-theme-learn/static/css/theme.css```
+in the file
+
+```themes/hugo-theme-learn/static/css/theme.css```
 
 change
 
