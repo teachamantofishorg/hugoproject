@@ -266,3 +266,9 @@ to commit all the changes so afterwards you can push the changes
 3: ```git push```
 
 and finally git push will upload all your local git changes to github
+
+---
+
+If you have generated data in your public folder that you want to discard to be able to do a git pull you can do
+
+```git checkout -- .```
