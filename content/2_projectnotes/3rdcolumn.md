@@ -52,6 +52,20 @@ Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutt
 {{< /tabs >}}
 {{< /codeforrightcolumn >}}
 
+## Table in right column?
+
+See https://stripe.com/docs/api/errors?lang=node for a nice looking example. 
+
+{{< codeforrightcolumn right firstset>}}
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+{{< /codeforrightcolumn >}}
+
+
 ## Second set
 
 Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.
