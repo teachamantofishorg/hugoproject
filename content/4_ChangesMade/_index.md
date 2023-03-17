@@ -2,10 +2,26 @@
 title: "what Martin did"
 draft: false
 ---
+## images folder
+
+simply add the images to a dedicated in your content/anydirectory/images
+
+then you can access them directly in your content/anydirectory/index.md file using
+
+```![test image](./images/test_image.png)```
+
+the output will be
+
+```public/anydirectory/images/test_image.png```
+
+
+the syntax ```./``` is always the current directory. since the images are in the same folder as the index folder we use the dot notation to access them
 
 ## fixing the extra whitespace on the right
 
-in the file ```themes/hugo-theme-learn/static/css/theme.css```
+in the file
+
+```themes/hugo-theme-learn/static/css/theme.css```
 
 change
 
@@ -250,3 +266,9 @@ to commit all the changes so afterwards you can push the changes
 3: ```git push```
 
 and finally git push will upload all your local git changes to github
+
+---
+
+If you have generated data in your public folder that you want to discard to be able to do a git pull you can do
+
+```git checkout -- .```

@@ -12,22 +12,22 @@
     <title>what Martin did :: My New Hugo Site</title>
 
     
-    <link href="../css/nucleus.css?1678271281" rel="stylesheet">
-    <link href="../css/fontawesome-all.min.css?1678271281" rel="stylesheet">
-    <link href="../css/hybrid.css?1678271281" rel="stylesheet">
-    <link href="../css/featherlight.min.css?1678271281" rel="stylesheet">
-    <link href="../css/perfect-scrollbar.min.css?1678271281" rel="stylesheet">
-    <link href="../css/auto-complete.css?1678271281" rel="stylesheet">
-    <link href="../css/atom-one-dark-reasonable.css?1678271281" rel="stylesheet">
-    <link href="../css/theme.css?1678271281" rel="stylesheet">
-    <link href="../css/tabs.css?1678271281" rel="stylesheet">
-    <link href="../css/hugo-theme.css?1678271281" rel="stylesheet">
+    <link href="../css/nucleus.css?1678715707" rel="stylesheet">
+    <link href="../css/fontawesome-all.min.css?1678715707" rel="stylesheet">
+    <link href="../css/hybrid.css?1678715707" rel="stylesheet">
+    <link href="../css/featherlight.min.css?1678715707" rel="stylesheet">
+    <link href="../css/perfect-scrollbar.min.css?1678715707" rel="stylesheet">
+    <link href="../css/auto-complete.css?1678715707" rel="stylesheet">
+    <link href="../css/atom-one-dark-reasonable.css?1678715707" rel="stylesheet">
+    <link href="../css/theme.css?1678715707" rel="stylesheet">
+    <link href="../css/tabs.css?1678715707" rel="stylesheet">
+    <link href="../css/hugo-theme.css?1678715707" rel="stylesheet">
     
-    <link href="../css/theme-mine.css?1678271281" rel="stylesheet">
+    <link href="../css/theme-mine.css?1678715707" rel="stylesheet">
     
     
 
-    <script src="../js/jquery-3.3.1.min.js?1678271281"></script>
+    <script src="../js/jquery-3.3.1.min.js?1678715707"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -70,14 +70,14 @@
     <span data-search-clear=""><i class="fas fa-search"></i></span>
 </div>
 
-<script type="text/javascript" src="../js/lunr.min.js?1678271281"></script>
-<script type="text/javascript" src="../js/auto-complete.js?1678271281"></script>
+<script type="text/javascript" src="../js/lunr.min.js?1678715707"></script>
+<script type="text/javascript" src="../js/auto-complete.js?1678715707"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="../js/search.js?1678271281"></script>
+<script type="text/javascript" src="../js/search.js?1678715707"></script>
 
         
       </div>
@@ -103,12 +103,12 @@
      
       
         
-        <li data-nav-id="/otherfiletypes/index.html" title="Other file types" class="dd-item
+        <li data-nav-id="/1_otherfiletypes/index.html" title="Other file types" class="dd-item
             
             
             
             ">
-          <a href="../otherfiletypes/index.html">
+          <a href="../1_otherfiletypes/index.html">
               Other file types
               
           </a>
@@ -130,8 +130,8 @@
      
       
         
-          <li data-nav-id="/otherfiletypes/html_file/index.html" title="HTML File" class="dd-item ">
-            <a href="../otherfiletypes/html_file/index.html">
+          <li data-nav-id="/1_otherfiletypes/html_file/index.html" title="HTML File" class="dd-item ">
+            <a href="../1_otherfiletypes/html_file/index.html">
             HTML File
             
             </a>
@@ -153,8 +153,8 @@
      
       
         
-          <li data-nav-id="/otherfiletypes/markdown/index.html" title="Markdown File and Notes" class="dd-item ">
-            <a href="../otherfiletypes/markdown/index.html">
+          <li data-nav-id="/1_otherfiletypes/markdown/index.html" title="Markdown File and Notes" class="dd-item ">
+            <a href="../1_otherfiletypes/markdown/index.html">
             Markdown File and Notes
             
             </a>
@@ -176,8 +176,8 @@
      
       
         
-          <li data-nav-id="/otherfiletypes/rst_file/index.html" title="RST File" class="dd-item ">
-            <a href="../otherfiletypes/rst_file/index.html">
+          <li data-nav-id="/1_otherfiletypes/rst_file/index.html" title="RST File" class="dd-item ">
+            <a href="../1_otherfiletypes/rst_file/index.html">
             RST File
             
             </a>
@@ -682,7 +682,7 @@
           <a href="../2_projectnotes/index.html"  title="Project Overview" class="page-nav-buttons topbarlink"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>
         
         
-          <a href="../otherfiletypes/rst_file/index.html"  title="RST File" class="page-nav-buttons topbarlink"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
+          <a href="../1_otherfiletypes/rst_file/index.html"  title="RST File" class="page-nav-buttons topbarlink"><i class="fa fa-chevron-left" aria-hidden="true"></i></a>
         
       
     </div>  
@@ -744,6 +744,7 @@
     <div class="wrapper">
 <nav id="TableOfContents">
   <ul>
+    <li><a href="#images-folder">images folder</a></li>
     <li><a href="#fixing-the-extra-whitespace-on-the-right">fixing the extra whitespace on the right</a></li>
     <li><a href="#fix-position-of-the-code">fix position of the code</a></li>
     <li><a href="#css-fix">css fix</a></li>
@@ -785,8 +786,15 @@
 
 
 
-	<h2 id="fixing-the-extra-whitespace-on-the-right">fixing the extra whitespace on the right</h2>
-<p>in the file <code>themes/hugo-theme-learn/static/css/theme.css</code></p>
+	<h2 id="images-folder">images folder</h2>
+<p>simply add the images to a dedicated in your content/anydirectory/images</p>
+<p>then you can access them directly in your content/anydirectory/index.md file using</p>
+<p><code>![test image](./images/test_image.png)</code></p>
+<p>the output will be</p>
+<p><code>public/anydirectory/images/test_image.png</code></p>
+<h2 id="fixing-the-extra-whitespace-on-the-right">fixing the extra whitespace on the right</h2>
+<p>in the file</p>
+<p><code>themes/hugo-theme-learn/static/css/theme.css</code></p>
 <p>change</p>
 <pre tabindex="0"><code>#body .padding {
     padding: 3rem 6rem;
@@ -1164,7 +1172,7 @@ The if statement checks if the page has the argument code set to true. If it is 
 
 
 
-<a style="display: none;" class="nav nav-prev" href="../otherfiletypes/rst_file/index.hml" title="RST File"> <i class="fa fa-chevron-left"></i></a>
+<a style="display: none;" class="nav nav-prev" href="../1_otherfiletypes/rst_file/index.hml" title="RST File"> <i class="fa fa-chevron-left"></i></a>
 
 
 <a style="display: none;" class="nav nav-next" href="../2_projectnotes/index.html" title="Project Overview" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
@@ -1177,19 +1185,19 @@ The if statement checks if the page has the argument code set to true. If it is 
 <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
 <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
 </div>
-<script src="../js/clipboard.min.js?1678271281"></script>
-<script src="../js/perfect-scrollbar.min.js?1678271281"></script>
-<script src="../js/perfect-scrollbar.jquery.min.js?1678271281"></script>
-<script src="../js/jquery.sticky.js?1678271281"></script>
-<script src="../js/featherlight.min.js?1678271281"></script>
-<script src="../js/highlight.pack.js?1678271281"></script>
+<script src="../js/clipboard.min.js?1678715707"></script>
+<script src="../js/perfect-scrollbar.min.js?1678715707"></script>
+<script src="../js/perfect-scrollbar.jquery.min.js?1678715707"></script>
+<script src="../js/jquery.sticky.js?1678715707"></script>
+<script src="../js/featherlight.min.js?1678715707"></script>
+<script src="../js/highlight.pack.js?1678715707"></script>
 <script>hljs.initHighlightingOnLoad();</script>
-<script src="../js/modernizr.custom-3.6.0.js?1678271281"></script>
-<script src="../js/learn.js?1678271281"></script>
-<script src="../js/hugo-learn.js?1678271281"></script>
+<script src="../js/modernizr.custom-3.6.0.js?1678715707"></script>
+<script src="../js/learn.js?1678715707"></script>
+<script src="../js/hugo-learn.js?1678715707"></script>
 
 
-<script src="../mermaid/mermaid.js?1678271281"></script>
+<script src="../mermaid/mermaid.js?1678715707"></script>
 
 <script>
 mermaid.initialize({ startOnLoad: true });

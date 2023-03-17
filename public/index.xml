@@ -40,19 +40,19 @@ All work and no play makes jack a dull boy. Bacon ipsum dolor amet filet mignon 
     
     <item>
       <title>HTML File</title>
-      <link>/otherfiletypes/html_file/</link>
+      <link>/1_otherfiletypes/html_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/otherfiletypes/html_file/</guid>
+      <guid>/1_otherfiletypes/html_file/</guid>
       <description>&lt;!doctype html&gt; Our Funky HTML Page Is this working? Content goes here.</description>
     </item>
     
     <item>
       <title>Markdown File and Notes</title>
-      <link>/otherfiletypes/markdown/</link>
+      <link>/1_otherfiletypes/markdown/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/otherfiletypes/markdown/</guid>
+      <guid>/1_otherfiletypes/markdown/</guid>
       <description>Type = directory name of the layout templates
 layout = layout template</description>
     </item>
@@ -80,10 +80,10 @@ All work and no play makes jack a dull boy. First set Use inner to place this in
     
     <item>
       <title>RST File</title>
-      <link>/otherfiletypes/rst_file/</link>
+      <link>/1_otherfiletypes/rst_file/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/otherfiletypes/rst_file/</guid>
+      <guid>/1_otherfiletypes/rst_file/</guid>
       <description>Short code tests Hello this is our tooltip
 2023 is the year
 This is the custom shortcode
