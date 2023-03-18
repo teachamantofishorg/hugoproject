@@ -1,1 +1,1 @@
-hugo serve --disableFastRender
+hugo serve --disableFastRender --renderToDisk
