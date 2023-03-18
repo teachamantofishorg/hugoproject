@@ -182,30 +182,10 @@ Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutt
 Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.
 Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.
 
-{{< codeforrightcolumn right fifthset 2250px>}}
-{{< tabs >}}
-{{% tab name="python" %}}
+{{< codeforrightcolumn right fifthset>}}
 
-```python
-{{% include "/../../resources/codesamples/codesample.html"   %}}
-```
+<img src="../images/test.png" class="tab-panel"/>
 
-{{% /tab %}}
-{{% tab name="javascript" %}}
-
-```javascript
-{{% include "/../../resources/codesamples/code.html"   %}}
-```
-
-{{% /tab %}}
-{{% tab name="java" %}}
-
-```java
-{{% include "/../../resources/codesamples/codesample.txt"   %}}
-```
-
-{{% /tab %}}
-{{< /tabs >}}
 {{< /codeforrightcolumn >}}
 
 ## Possible references
