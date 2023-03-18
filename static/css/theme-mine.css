@@ -173,6 +173,10 @@ p {
     white-space: pre;
 }
 
+#body .padding {
+    padding-left: 1rem !important;
+}
+
 #body div #code-column .tab-panel {
     margin-top: 0px !important;
     margin-bottom: 0px !important;

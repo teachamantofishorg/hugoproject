@@ -70,6 +70,10 @@ I then add an extra padding of 60px to fit the positioning.
 But most importantly i set the position as absolute. So the css style for 'top' actually works.
 If the position is relative, the css positioning tags like 'top', 'bottom', 'left', 'right' will not work.
 
+**UPDATE**
+to remove the code sample run off the page I changed the line to have a fixed width of 95%.
+
+```+ 'px; position: absolute; width: 95%;';```
 
 ## css fix
 for the css fix i removed some code from multiple files
