@@ -1,41 +1,31 @@
 
 <!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript) -->
 <script>
-// Get offset of initial code samples in main column
-let position_array = []
-let column = document.getElementById('code-column');
-let top_header_columns = document.getElementsByClassName('second-column');
-let column_content = document.getElementsByClassName('right-column-content');
-let headers = document.getElementsByTagName('h2');
-let code_samples = column.getElementsByClassName('tab-panel');
-
 $(document).ready(function() {
+  // Get offset of initial code samples in main column
+  let position_array = []
+  let column = $('#code-column')[0];
+  let top_header_columns = $('.second-column');
+  let column_content = $('.right-column-content');
+  let headers = $('h2');
+
+  let code_samples = $('.tab-panel');
+
   $("#column-toggler").click(function() {
-
-      if (column.style.display !== 'none') {
-        column.innerHTML = '';
-        column.style.display = 'none';
+      if ($(column).is(':visible')) {
+        $(column).html('').hide();
         
+        $(top_header_columns).hide();
 
-        for (element of top_header_columns) {
-          element.style.display = 'none';
-        }
+        $(column_content).removeClass('hide').addClass('show');
+      } else {
+        $(column_content).each(function() {
+          $(column).append($(this).html());
+          $(this).removeClass('show').addClass('hide');
+        });
 
-        for (element of column_content) {
-          element.classList.remove('hide');
-          element.classList.add('show');
-        }
-      }
-      else {
-        for (element of column_content) {
-          column.innerHTML += element.innerHTML;
-          element.classList.remove('show')
-          element.classList.add('hide');
-        }
+        $(top_header_columns).show();
 
-        for (element of top_header_columns) {
-          element.style.display = 'block';
-        }
         setTimeout(() => {
           let index = 0;
           if (!position_array.length) {
@@ -49,13 +39,13 @@ $(document).ready(function() {
               'top: ' 
               + Math.round(position_array[index] + 60).toString()
               + 'px; position: absolute; width: 95%;';
-            index++;
+              index++;
           }
         }, 75);
-        column.style.display = 'block';
-      } 
+        $(column).show();
+      }
     }
-  );
+  )
 
   $(window).scroll(function () {
     if ($(this).scrollTop() >= 50) {

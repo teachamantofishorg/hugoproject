@@ -26,42 +26,35 @@ Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutt
 
 Bacon ipsum dolor amet filet mignon pork chop beef pig jowl spare ribs prosciutto pork landjaeger burgdoggen corned beef meatloaf drumstick. Alcatra shoulder ball tip swine beef kielbasa tongue cupim capicola biltong prosciutto venison burgdoggen porchetta meatball. Beef ribs ball tip sausage alcatra capicola meatball pork. Tongue leberkas short ribs ham hock. Beef ribs short ribs pork loin landjaeger ribeye tri-tip shoulder.
 
-{{< codeforrightcolumn right firstset 295px>}}
-{{< tabs >}}
-{{% tab name="python" %}}
 
-```python
-{{% include "/../../resources/codesamples/codesample.html"   %}}
-```
-
-{{% /tab %}}
-{{% tab name="javascript" %}}
-
-```javascript
-{{% include "/../../resources/codesamples/code.html"   %}}
-```
-
-{{% /tab %}}
-{{% tab name="java" %}}
-
-```java
-{{% include "/../../resources/codesamples/codesample.txt"   %}}
-```
-
-{{% /tab %}}
-{{< /tabs >}}
-{{< /codeforrightcolumn >}}
-
-## Table in right column?
 
 See https://stripe.com/docs/api/errors?lang=node for a nice looking example. 
 
+
 {{< codeforrightcolumn right firstset>}}
 
-Markdown | Less | Pretty
---- | --- | ---
-*Still* | `renders` | **nicely**
-1 | 2 | 3
+<table class="tab-panel">
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
 
 {{< /codeforrightcolumn >}}
 
