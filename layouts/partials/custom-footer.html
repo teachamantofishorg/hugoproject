@@ -1,6 +1,25 @@
 
 <!-- Partial intended to be overwritten with tags loaded at the end of the page loading (usually for Javascript) -->
 <script>
+
+  function getElementTopPosition(element) {
+    let positionTop = 0;
+    
+    try {
+      const $element = $(element);
+      
+      if($element.length === 1) {
+        positionTop = Math.round($element.offset().top).toString() + 'px';
+      } else {
+        console.error('Invalid element. Expected: single element, but found:', $element);
+      }
+    } catch (err) {
+      console.error(err);
+    }
+  
+    return positionTop;
+  }
+  
 $(document).ready(function() {
   // Get offset of initial code samples in main column
   let position_array = []
@@ -9,40 +28,45 @@ $(document).ready(function() {
   let column_content = $('.right-column-content');
   let headers = $('h2');
 
-  let code_samples = $('.tab-panel');
 
   $("#column-toggler").click(function() {
+      let code_samples = $('.tab-panel');
+
+      console.log(column_content)
+      console.log(code_samples)
       if ($(column).is(':visible')) {
         $(column).html('').hide();
         
         $(top_header_columns).hide();
 
         $(column_content).removeClass('hide').addClass('show');
+        for (element of code_samples) {
+            element.style= "";
+          }
       } else {
+        let index = 0;
+        if (!position_array.length) {
+          for (item of headers) {
+            position_array.push(getElementTopPosition(item));
+          }
+        }
+        code_samples.each(function() {
+          $(this).css({
+              top: position_array[index],
+              position: 'absolute',
+              width: '95%'
+          });
+          index++;
+
+        });
+        console.log(position_array)
         $(column_content).each(function() {
           $(column).append($(this).html());
           $(this).removeClass('show').addClass('hide');
         });
-
         $(top_header_columns).show();
-
-        setTimeout(() => {
-          let index = 0;
-          if (!position_array.length) {
-            for (item of headers) {
-              position_array.push($(item).position().top);
-            }
-          }
-
-          for (element of code_samples) {
-            element.style = 
-              'top: ' 
-              + Math.round(position_array[index] + 60).toString()
-              + 'px; position: absolute; width: 95%;';
-              index++;
-          }
-        }, 75);
         $(column).show();
+
       }
     }
   )
@@ -77,10 +101,4 @@ $(document).ready(function() {
 
 });
 
-
-function getElementTopPosition(element) {
-  console.log($(element).position().top);
-  return Math.round($(element).position().top).toString() + 'px';
-
-}
 </script>
