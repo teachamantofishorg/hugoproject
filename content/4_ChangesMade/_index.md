@@ -2,6 +2,43 @@
 title: "what Martin did"
 draft: false
 ---
+
+## adding a table
+
+currently only html code is supported in the "codeforrightcolumn section". if you are intrested i can update it to be able to parse markdown as well.
+
+here is the table updated for html
+
+```
+
+<table class="tab-panel">
+<thead>
+<tr>
+<th>Markdown</th>
+<th>Less</th>
+<th>Pretty</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Still</em></td>
+<td><code>renders</code></td>
+<td><strong>nicely</strong></td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+```
+
+I have also updated the logic in ``custom-footer.html`` to be cleaner and more readable.
+
+**IMPORTANT**, currently only the items with the class "tab-panel" will be rendered correctly. it is used to detect the elements and position them correctly
+
 ## images folder
 
 simply add the images to a dedicated in your content/anydirectory/images
