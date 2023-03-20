@@ -6,6 +6,7 @@ sectionPagesMenu = "main"
 pluralizelisttitles = "false"
 enableGitInfo = true
 relativeURLs = true
+uglyUrls = true
 
 [frontmatter]
 date = ["date", "publishDate", "lastmod"]
