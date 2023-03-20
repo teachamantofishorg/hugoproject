@@ -552,8 +552,9 @@ div.table-of-contents #TableOfContents > ul > li > a {
     width: 3.25rem;
     z-index: 9;
  }
- 
+
  #scroll span {
+    background: url('..\\images\\icon-back-to-top-arrow.png');
     background-repeat: no-repeat;
     display: block;
     height: 24px;
