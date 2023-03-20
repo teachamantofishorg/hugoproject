@@ -411,7 +411,9 @@ div.table-of-contents #TableOfContents > ul > li > a {
 
 /* Theme Overrides Carry Over CSS */
 /* STARTS HERE !!!!!!!! */
+
 .fixedbar .wy-menu-items a { 
+
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
@@ -577,12 +579,10 @@ div.table-of-contents #TableOfContents > ul > li > a {
     margin-top: 4px;
  }
 
- @media only all and (max-width: 45.8em) {
+ @media only all and (max-width: 768px) {
     .fixedbar {
         width: 100%;
         margin-left: 0;
-
-
     }
     #sidebar {
         display:none;

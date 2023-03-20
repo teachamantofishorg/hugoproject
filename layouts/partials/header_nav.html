@@ -44,7 +44,7 @@
       {{$showPrevNext := (and (not .Params.disableNextPrev) (not .Site.Params.disableNextPrev))}}
       {{ if .Params.code }}
 
-      <a href="#code" onclick="scrollToNextHeader()" class="page-nav-buttons topbarlink">Next Code Section</a> 
+      <a href="#code" id="next-code-section" class="page-nav-buttons topbarlink">Next Code Section</a> 
       {{ end }}
 
       {{if $showPrevNext}}
@@ -57,19 +57,3 @@
       {{end}}
     </div>  
 </div>
-
-<script>
-  let currentHeader = 0
-
-  function scrollToNextHeader() {
-    let headers = document.body.getElementsByTagName('h2')
-    if (currentHeader < headers.length - 1) currentHeader += 1
-    else currentHeader = 0
-  
-    headers[currentHeader].scrollIntoView({
-      behavior: "smooth", 
-      block: "end", 
-      inline: "nearest"
-    });
-  }
-</script>
