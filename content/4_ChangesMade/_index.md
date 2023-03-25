@@ -214,11 +214,18 @@ in the content files
 relativeURLs = true
 ```
 
+**step 3-6 is only necessary if uglyUrls are disabled, if uglyUrls are true do not change the logic**
+
 3. press "ctrl + shift + f" in vscode to search through all files in the project and look for:
 
 ```
 {{.RelPermalink}}
 ```
+and
+```
+{{ .RelPermalink }}
+```
+
 
 4. click the arrow '>' to open up the search field to search and replace
 
