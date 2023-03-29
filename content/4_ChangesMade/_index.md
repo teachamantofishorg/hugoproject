@@ -133,7 +133,7 @@ i also made a few changes in the
 
 and added the following code:
 
-```
+```css
 #body {
     padding-top: 55px;
     margin-left: 300px;
@@ -142,7 +142,10 @@ and added the following code:
 }
 
 #body .padding {
-    padding-left: 1rem ;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 1rem;
 }
 
 @media only all and (max-width: 59.938em) {

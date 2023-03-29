@@ -170,10 +170,6 @@ p {
     white-space: pre;
 }
 
-#body .padding {
-    padding-left: 1rem !important;
-}
-
 #body div #code-column .tab-panel {
     margin-top: 0px !important;
     margin-bottom: 0px !important;
@@ -621,7 +617,10 @@ div.table-of-contents #TableOfContents > ul > li > a {
 }
 
 #body .padding {
-    padding-left: 1rem ;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 1rem;
 }
 
 @media only all and (max-width: 59.938em) {
