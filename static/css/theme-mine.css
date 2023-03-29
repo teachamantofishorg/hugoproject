@@ -102,9 +102,6 @@ a:hover {
     width: 100%;
 
 }
-#body {
-    padding-top: 55px;
-}
 #body a.highlight {
     line-height: 0;
     outline: none;
@@ -610,5 +607,33 @@ div.table-of-contents #TableOfContents > ul > li > a {
         z-index: 10;
         background: rgba(255, 255, 255, 0.5);
         cursor: pointer;
+    }
+}
+
+
+
+
+#body {
+    padding-top: 55px;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    overflow-x: hidden;
+}
+
+#body .padding {
+    padding-left: 1rem ;
+}
+
+@media only all and (max-width: 59.938em) {
+    #body .padding {
+        position: relative;
+        padding-left: 6rem;
+        padding-right: 2rem;
+    }
+}
+@media only all and (max-width: 47.938em) {
+    #body {
+        margin-left: 0;
+        width: 100%;
     }
 }

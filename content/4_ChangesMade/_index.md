@@ -130,13 +130,36 @@ i also made a few changes in the
 
 ```static/css/theme-mine.css```
 
-and
 
-```themes/hugo-theme-learn/static/css/theme.css```
+and added the following code:
 
-to improve styling of the page, and remove some stuff that was not necessary.
+```
+#body {
+    padding-top: 55px;
+    margin-left: 300px;
+    width: calc(100% - 300px);
+    overflow-x: hidden;
+}
 
-again look at the commit changes to go see what the exact changes are, there is many small things that i changed so it is harder to go into detail.
+#body .padding {
+    padding-left: 1rem ;
+}
+
+@media only all and (max-width: 59.938em) {
+    #body .padding {
+        position: relative;
+        padding-left: 6rem;
+        padding-right: 2rem;
+    }
+}
+@media only all and (max-width: 47.938em) {
+    #body {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+```
+
 
 ## next code section button
 I added the button to the header_nav.html

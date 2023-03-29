@@ -324,10 +324,8 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
 #body {
     position: relative;
     margin-left: 300px;
-    width: calc(100% - 300px);
-    overflow-x: hidden;
+    min-height: 100%;
 }
-
 #body img, #body .video-container {
     margin: 3rem auto;
     display: block;
@@ -349,12 +347,12 @@ textarea:focus, input[type="email"]:focus, input[type="number"]:focus, input[typ
     border: 1px solid #ccc;
 }
 #body .padding {
-    padding-left: 1rem;
+    padding: 3rem 6rem;
 }
 @media only all and (max-width: 59.938em) {
     #body .padding {
-        padding-left: 6rem;
-        padding-right: 2rem;
+        position: static;
+        padding: 15px 3rem;
     }
 }
 @media only all and (max-width: 47.938em) {
@@ -1020,6 +1018,9 @@ td {
 @media only all and (max-width: 59.938em) {
     #sidebar {
         width: 230px;
+    }
+    #body {
+        margin-left: 230px;
     }
 }
 @media only all and (max-width: 47.938em) {
